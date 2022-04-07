@@ -1,8 +1,9 @@
 package entities
 
 import (
-	"github.com/stianeikeland/go-rpio"
 	"time"
+
+	"github.com/stianeikeland/go-rpio/v4"
 )
 
 type Buzzer struct {

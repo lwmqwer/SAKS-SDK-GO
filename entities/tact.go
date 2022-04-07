@@ -1,9 +1,10 @@
 package entities
 
 import (
-	"github.com/stianeikeland/go-rpio"
-	"time"
 	"reflect"
+	"time"
+
+	"github.com/stianeikeland/go-rpio/v4"
 )
 
 type Tact struct {
@@ -50,7 +51,7 @@ func (t *Tact) Register(observer func(rpio.Pin, bool)) {
 func (t *Tact) DeRegister(observer func(rpio.Pin, bool)) {
 	pos := t.RegisterContains(observer)
 	if pos != -1 {
-		t.observers = append(t.observers[:pos], t.observers[pos + 1:]...)
+		t.observers = append(t.observers[:pos], t.observers[pos+1:]...)
 	}
 }
 
@@ -124,7 +125,7 @@ func (t *TactRow) Register(observer func([]bool)) {
 func (t *TactRow) DeRegister(observer func([]bool)) {
 	pos := t.RegisterContains(observer)
 	if pos != -1 {
-		t.observers = append(t.observers[:pos], t.observers[pos + 1:]...)
+		t.observers = append(t.observers[:pos], t.observers[pos+1:]...)
 	}
 }
 

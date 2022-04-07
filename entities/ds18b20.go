@@ -1,14 +1,15 @@
 package entities
 
 import (
-	"strings"
-	"strconv"
-	"log"
-	"path/filepath"
-	"os"
 	"bufio"
+	"log"
+	"os"
+	"path/filepath"
+	"strconv"
+	"strings"
 	"time"
-	"github.com/stianeikeland/go-rpio"
+
+	"github.com/stianeikeland/go-rpio/v4"
 )
 
 type DS18B20 struct {
@@ -58,7 +59,7 @@ func (d *DS18B20) ReadTemp(index int) float64 {
 	}
 	lines := tr
 	afterTrim := strings.TrimSpace(lines[0])
-	for afterTrim[len(afterTrim) - 3:] != "YES" {
+	for afterTrim[len(afterTrim)-3:] != "YES" {
 		time.Sleep(200 * time.Millisecond)
 		tr := d.ReadTempRaw(index)
 		if len(tr) == 0 {
@@ -69,7 +70,7 @@ func (d *DS18B20) ReadTemp(index int) float64 {
 	}
 	equalsPos := strings.Index(lines[1], "t=")
 	if equalsPos != -1 {
-		tempString := lines[1][equalsPos + 2:]
+		tempString := lines[1][equalsPos+2:]
 		var err error
 		ret, err = strconv.ParseFloat(tempString, 64)
 		if err != nil {

@@ -1,6 +1,6 @@
 package entities
 
-import "github.com/stianeikeland/go-rpio"
+import "github.com/stianeikeland/go-rpio/v4"
 
 type IC_74HC595 struct {
 	Pins     map[string]rpio.Pin

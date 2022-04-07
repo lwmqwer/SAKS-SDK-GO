@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/hanbang-wang/SAKS-SDK-GO/entities"
+	"github.com/lwmqwer/SAKS-SDK-GO/entities"
 	"github.com/stianeikeland/go-rpio/v4"
 )
 

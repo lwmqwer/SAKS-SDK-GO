@@ -1,6 +1,6 @@
 package entities
 
-import "github.com/stianeikeland/go-rpio"
+import "github.com/stianeikeland/go-rpio/v4"
 
 type Led74HC595 struct {
 	IC *IC_74HC595
@@ -19,7 +19,7 @@ func (d *Led74HC595) IsOn(index uint) bool {
 	if index > 7 {
 		return false
 	}
-	return (d.IC.Data >> index) & 0x01 != 0
+	return (d.IC.Data>>index)&0x01 != 0
 }
 
 func (d *Led74HC595) RowStatus() [8]bool {

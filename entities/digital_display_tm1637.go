@@ -1,15 +1,16 @@
 package entities
 
 import (
-	"regexp"
-	"strings"
-	"strconv"
 	"log"
-	"github.com/stianeikeland/go-rpio"
+	"regexp"
+	"strconv"
+	"strings"
+
+	"github.com/stianeikeland/go-rpio/v4"
 )
 
 var (
-	numberCode = []uint8{0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x00, 0x40}
+	numberCode  = []uint8{0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x00, 0x40}
 	addressCode = []uint8{0xc0, 0xc1, 0xc2, 0xc3}
 )
 
@@ -71,7 +72,7 @@ func (d *DigitalDisplayTM1637) Show(str string) {
 			}
 		}
 		if dp {
-			d.IC.SetData(addressCode[i], numberCode[after] | 0x80)
+			d.IC.SetData(addressCode[i], numberCode[after]|0x80)
 		} else {
 			d.IC.SetData(addressCode[i], numberCode[after])
 		}

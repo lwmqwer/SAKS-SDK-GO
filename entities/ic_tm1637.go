@@ -1,7 +1,7 @@
 package entities
 
 import (
-	"github.com/stianeikeland/go-rpio"
+	"github.com/stianeikeland/go-rpio/v4"
 )
 
 type IC_TM1637 struct {
