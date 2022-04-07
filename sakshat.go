@@ -1,11 +1,12 @@
 package sakshat
 
 import (
-	"github.com/hanbang-wang/SAKS-SDK-GO/entities"
-	"github.com/stianeikeland/go-rpio"
 	"log"
 	"os"
 	"os/signal"
+
+	"github.com/hanbang-wang/SAKS-SDK-GO/entities"
+	"github.com/stianeikeland/go-rpio/v4"
 )
 
 var (

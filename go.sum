@@ -1,0 +1,6 @@
+github.com/hanbang-wang/SAKS-SDK-GO v0.0.0-20160904033922-620027b9ee4d h1:dIKLVYQvYTMA89yLExWOgqhq9UAIhwEs5ImHOX4yZPs=
+github.com/hanbang-wang/SAKS-SDK-GO v0.0.0-20160904033922-620027b9ee4d/go.mod h1:A2jJZkyOT0jVUQ2jXT6m2eazbS/U39uNvIKM6vbQmgc=
+github.com/stianeikeland/go-rpio v4.2.0+incompatible h1:CUOlIxdJdT+H1obJPsmg8byu7jMSECLfAN9zynm5QGo=
+github.com/stianeikeland/go-rpio v4.2.0+incompatible/go.mod h1:Sh81rdJwD96E2wja2Gd7rrKM+XZ9LrwvN2w4IXrqLR8=
+github.com/stianeikeland/go-rpio/v4 v4.6.0 h1:eAJgtw3jTtvn/CqwbC82ntcS+dtzUTgo5qlZKe677EY=
+github.com/stianeikeland/go-rpio/v4 v4.6.0/go.mod h1:A3GvHxC1Om5zaId+HqB3HKqx4K/AqeckxB7qRjxMK7o=
